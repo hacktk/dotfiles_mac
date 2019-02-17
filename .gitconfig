@@ -1,0 +1,17 @@
+[user]
+    email = hacktk3@gmail.com
+    name = hacktk
+[color]
+    ui = auto
+[core]
+    excludesfile = ~/.gitignore
+    ignorecase = false
+    quotepath = false
+[interactive]
+    diffFilter = diff-highlight
+[pager]
+    diff = diff-highlight | less
+    log = diff-highlight | less
+    show = diff-highlight | less
+[diff]
+    compactionHeuristic = true

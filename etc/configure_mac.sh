@@ -1,0 +1,104 @@
+#!/usr/bin/env bash
+
+set -e
+
+if ! command -v defaults > /dev/null 2>&1; then
+    echo "\`defaults\` not found. Nothing to do."
+    exit 0
+fi
+
+echo "Configuring..."
+defaults write -g AppleLanguages '( "en-JP", "ja-JP")'
+defaults write -g AppleShowScrollBars -string "WhenScrolling"
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
+defaults write -g AppleShowAllExtensions -bool true
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.CrashReporter UseUNC -bool true
+defaults write KeyRepeat -int 2
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+# spotlight shortcut command + space
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>65535</integer><integer>49</integer><integer>262144</integer></array><key>type</key><string>standard</string></dict></dict>"
+defaults -currentHost write com.apple.screensaver idleTime -int 0
+
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
+
+echo "Configuring Mouse..."
+defaults write com.apple.AppleMultitouchMouse MouseButtonDivision -int 55
+defaults write com.apple.AppleMultitouchMouse MouseButtonMode -string TwoButton
+defaults write com.apple.AppleMultitouchMouse MouseVerticalScroll -int 1
+defaults write com.apple.AppleMultitouchMouse MouseHorizontalScroll -int 1
+defaults write com.apple.AppleMultitouchMouse MouseMomentumScroll -int 1
+defaults write com.apple.AppleMultitouchMouse MouseOneFingerDoubleTapGesture -int 0
+defaults write com.apple.AppleMultitouchMouse MouseTwoFingerDoubleTapGesture -int 3
+defaults write com.apple.AppleMultitouchMouse MouseTwoFingerHorizSwipeGesture -int 2
+
+echo "Configuring Trackpad..."
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+
+echo "Configuring Keyboard..."
+defaults write NSGlobalDomain InitialKeyRepeat -int 35
+defaults write NSGlobalDomain KeyRepeat -int 2
+
+echo "Configuring SystemUIServer..."
+defaults write com.apple.systemuiserver menuExtras -array \
+    "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+    "/System/Library/CoreServices/Menu Extras/TextInput.menu" \
+    "/System/Library/CoreServices/Menu Extras/Clock.menu" \
+    "/System/Library/CoreServices/Menu Extras/AirPort.menu"
+defaults write com.apple.menuextra.clock isAnalog -bool true
+killall SystemUIServer
+
+echo "Configuring Dock..."
+defaults write com.apple.dock show-recents -bool false
+defaults write com.apple.dock tilesize -int 77
+defaults write com.apple.dock largesize -int 91
+defaults write com.apple.dock magnification -int 1
+defaults write com.apple.dock wvous-bl-corner -int 11 # Launchpad
+defaults write com.apple.dock wvous-bl-modifier -int 0
+defaults write com.apple.dock wvous-br-corner -int 10 # Put display to sleep
+defaults write com.apple.dock wvous-br-modifier -int 0
+defaults write com.apple.dock wvous-tr-corner -int 12 # Notification Center
+defaults write com.apple.dock wvous-tr-modifier -int 0
+defaults write com.apple.dock mru-spaces -bool false # Disable automatically rearrange spacet
+killall Dock
+
+echo "Configuring Finder..."
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+defaults write com.apple.finder FXRemoveOldTrashItems -bool true
+killall Finder
+
+echo "Configuring Safari..."
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+defaults write com.apple.Safari ShowStatusBar -bool true
+defaults write com.apple.Safari AutoFillPasswords -bool true
+killall Safari
+
+echo
+
+# brew
+if ! command -v brew > /dev/null 2>&1; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo
+fi
+brew bundle
+
+# ricty
+cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
+fc-cache -vf
+
+echo
