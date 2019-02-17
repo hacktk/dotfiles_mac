@@ -2,7 +2,13 @@
 
 set -eu
 
-DOT_PATH="$HOME/work/src/dotfiles"
+# install brew & command line tools
+if ! command -v brew > /dev/null 2>&1; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo
+fi
+
+DOT_PATH="$HOME/repo/dotfiles"
 
 if [ ! -d "$DOT_PATH" ]; then
     git clone git@github.com:hacktk/dotfiles.git "$DOT_PATH"
@@ -17,7 +23,7 @@ fi
 
 cd "$DOT_PATH"
 
-etc/configure_mac.sh
+etc/configure.sh
 echo
 
 etc/deploy.sh
