@@ -29,8 +29,5 @@
     "terminal.integrated.fontFamily": "Ricty",
     "terminal.integrated.fontSize": 16,
     "workbench.colorTheme": "Monokai",
-    "workbench.iconTheme": "vscode-icons",
-    "phpmd.validate.rulesets": "codesize,controversial,design,unusedcode",
-    "phpmd.validate.executablePath": "./app/vendor",
-    "phpmd.validate.rulesetsFile": "./app/phpmd.xml"
+    "workbench.iconTheme": "vscode-icons"
 }
