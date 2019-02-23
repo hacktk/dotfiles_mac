@@ -93,6 +93,9 @@ defaults write com.apple.systemuiserver menuExtras -array \
     "/System/Library/CoreServices/Menu Extras/TextInput.menu" \
     "/System/Library/CoreServices/Menu Extras/Clock.menu" \
     "/System/Library/CoreServices/Menu Extras/Battery.menu"
+# AirPlayを表示しない
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.airplay" -bool false
+defaults write com.apple.airplay showInMenuBarIfPresent -bool false
 # VPNの接続時間を表示
 defaults write com.apple.networkConnect VPNShowTime -bool true
 # バッテリーを％表示
