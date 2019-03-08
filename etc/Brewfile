@@ -7,7 +7,6 @@ brew "bash-completion@2"
 brew "docker"
 brew "git"
 brew "hugo"
-brew "mas"
 brew "openssl"
 brew "watch"
 brew "sanemat/font/ricty"
@@ -24,5 +23,3 @@ cask "skitch"
 cask "visual-studio-code"
 cask "vlc"
 cask "zoomus"
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
