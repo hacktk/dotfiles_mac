@@ -533,6 +533,8 @@
 	</data>
 	<key>Bell</key>
 	<false/>
+	<key>CharacterEncoding</key>
+	<integer>4</integer>
 	<key>CursorBlink</key>
 	<true/>
 	<key>DisableANSIColor</key>
@@ -918,7 +920,7 @@
 	<key>name</key>
 	<string>Simple</string>
 	<key>rowCount</key>
-	<integer>25</integer>
+	<integer>22</integer>
 	<key>shellExitAction</key>
 	<integer>1</integer>
 	<key>type</key>
