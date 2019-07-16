@@ -30,5 +30,6 @@
     "terminal.integrated.fontFamily": "Ricty",
     "terminal.integrated.fontSize": 16,
     "workbench.colorTheme": "Monokai",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.statusBar.visible": false
 }
