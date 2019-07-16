@@ -630,6 +630,8 @@
 	gA2EDYsNlA2ZDaYNqQ22DbsNww3GDdgN2w3gAAAAAAAAAgEAAAAAAAAALwAAAAAAAAAA
 	AAAAAAAADeI=
 	</data>
+	<key>SetLanguageEnvironmentVariables</key>
+	<false/>
 	<key>ShowActiveProcessArgumentsInTitle</key>
 	<false/>
 	<key>ShowActiveProcessInTabTitle</key>
