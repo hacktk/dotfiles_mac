@@ -10,3 +10,4 @@ alias ll='ls -ahl'
 alias curl='curl -H "Accept-Encoding: gzip,deflate"'
 
 export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1
