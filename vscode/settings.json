@@ -11,6 +11,7 @@
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [120],
+    "explorer.compactFolders": false,
     "files.exclude": {
         "**/.git": false,
         "**/.svn": false,
@@ -31,5 +32,6 @@
     "terminal.integrated.fontSize": 16,
     "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "vscode-icons",
+    "workbench.startupEditor": "newUntitledFile",
     "workbench.statusBar.visible": false
 }
