@@ -49,3 +49,6 @@ BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 ln -fvs "$DOCKER_PATH/docker.bash-completion" "$BASH_COMPLETION_COMPAT_DIR/docker"
 ln -fvs "$DOCKER_PATH/docker-machine.bash-completion" "$BASH_COMPLETION_COMPAT_DIR/docker-machine"
 ln -fvs "$DOCKER_PATH/docker-compose.bash-completion" "$BASH_COMPLETION_COMPAT_DIR/docker-compose"
+
+# terraform
+mkdir -p "$HOME/.terraform.d/plugin-cache"
