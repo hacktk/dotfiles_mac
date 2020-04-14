@@ -42,6 +42,9 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontFamily": "Ricty",
     "terminal.integrated.fontSize": 16,
+    "timeline.excludeSources": [
+        "git-history"
+    ],
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "vscode-icons",
