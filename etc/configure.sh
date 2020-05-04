@@ -106,5 +106,8 @@ killall SystemUIServer
 
 echo
 
+# Spotlightのindex作成を無効
+sudo mdutil -a -i off
+
 # brew
 brew bundle --file=etc/Brewfile
