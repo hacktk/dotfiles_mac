@@ -13,6 +13,7 @@
     "editor.rulers": [
         120
     ],
+    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
     "explorer.compactFolders": false,
     "files.exclude": {
         "**/.git": false,
