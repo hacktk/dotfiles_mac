@@ -37,8 +37,10 @@
         "enabled": false
     },
     "terraform.languageServer": {
-        "enabled": true,
-        "args": []
+        "external": true,
+        "args": [
+            "serve"
+        ]
     },
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontFamily": "Ricty",
