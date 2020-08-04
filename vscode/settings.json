@@ -13,7 +13,6 @@
     "editor.rulers": [
         120
     ],
-    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
     "explorer.compactFolders": false,
     "files.exclude": {
         "**/.git": false,
@@ -32,9 +31,6 @@
     "search.useIgnoreFiles": false,
     "[terraform]": {
         "editor.formatOnSave": true
-    },
-    "terraform.indexing": {
-        "enabled": false
     },
     "terraform.languageServer": {
         "external": true,
