@@ -8,10 +8,10 @@ if ! command -v brew > /dev/null 2>&1; then
     echo
 fi
 
-DOT_PATH="$HOME/repo/dotfiles"
+DOT_PATH="$HOME/repo/dotfiles_mac"
 
 if [ ! -d "$DOT_PATH" ]; then
-    git clone git@github.com:hacktk/dotfiles.git "$DOT_PATH"
+    git clone git@github.com:hacktk/dotfiles_mac.git "$DOT_PATH"
 else
     echo "$DOT_PATH already downloaded. Updating..."
     cd "$DOT_PATH"

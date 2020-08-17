@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT_PATH="$HOME/repo/dotfiles"
+DOT_PATH="$HOME/repo/dotfiles_mac"
 
 if [ ! -d "$DOT_PATH" ]; then
     echo "Error: Directory $DOT_PATH does not exist."
