@@ -2,12 +2,12 @@ ecmel.vscode-html-css
 EditorConfig.EditorConfig
 felixfbecker.php-intellisense
 formulahendry.code-runner
-mauve.terraform
+hashicorp.terraform
 mechatroner.rainbow-csv
 neilbrayfield.php-docblocker
 octref.vetur
 onecentlin.laravel-blade
 streetsidesoftware.code-spell-checker
-robertohuertasm.vscode-icons
+vscode-icons-team.vscode-icons
 wmaurer.change-case
 ziyasal.vscode-open-in-github
