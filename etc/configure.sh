@@ -104,6 +104,10 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.clock DateFormat -string "M\\U6708d\\U65e5(EEE)  H:mm:ss"
 killall SystemUIServer
 
+echo "Configuring HostName..."
+sudo scutil --set ComputerName mbp61
+sudo scutil --set LocalHostName mbp61
+
 echo
 
 # brew
