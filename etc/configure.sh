@@ -8,7 +8,11 @@ if ! command -v defaults > /dev/null 2>&1; then
 fi
 
 echo "Configuring General..."
-defaults write -g AppleLanguages '("ja-JP")'
+defaults write -g AppleLanguages '("en-US")'
+# アクセントカラーをGraphiteにする
+defaults write -g AppleAccentColor -string "-1"
+defaults write -g AppleAquaColorVariant -int 6
+defaults write -g AppleHighlightColor -string "0.847059 0.847059 0.862745 Graphite"
 # スクロールバーを常に表示
 defaults write -g AppleShowScrollBars -string "Always"
 # スクロールバーのクリック時はクリックされた場所にジャンプ
@@ -85,21 +89,17 @@ defaults write com.apple.dock showDesktopGestureEnabled -bool false
 # デスクトップを表示するジェスチャーを無効
 defaults write com.apple.dock showLaunchpadGestureEnabled -bool false
 
-echo "Configuring SystemUIServer..."
-# メニューバーに表示するもの
+echo "Configuring Menu Bar..."
+# サウンドを表示する
+defaults write com.apple.controlcenter "NSStatusItem Visible Sound" -bool true
+# VPNを表示する
 defaults write com.apple.systemuiserver menuExtras -array \
-    "/System/Library/CoreServices/Menu Extras/VPN.menu" \
-    "/System/Library/CoreServices/Menu Extras/Volume.menu" \
-    "/System/Library/CoreServices/Menu Extras/TextInput.menu" \
-    "/System/Library/CoreServices/Menu Extras/Clock.menu" \
-    "/System/Library/CoreServices/Menu Extras/Battery.menu"
+    "/System/Library/CoreServices/Menu Extras/VPN.menu"
+# VPNの接続時間を表示
+defaults write com.apple.networkConnect VPNShowTime -bool true
 # AirPlayを表示しない
 defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.airplay" -bool false
 defaults write com.apple.airplay showInMenuBarIfPresent -bool false
-# VPNの接続時間を表示
-defaults write com.apple.networkConnect VPNShowTime -bool true
-# バッテリーを％表示
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 # 日付時刻フォーマットを指定
 defaults write com.apple.menuextra.clock DateFormat -string "M\\U6708d\\U65e5(EEE)  H:mm:ss"
 killall SystemUIServer
