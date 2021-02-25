@@ -25,10 +25,12 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "intelephense.environment.documentRoot": "src",
     "[markdown]": {
         "files.trimTrailingWhitespace": false
     },
     "php.suggest.basic": false,
+    "php.validate.enable": false,
     "search.useIgnoreFiles": false,
     "[terraform]": {
         "editor.formatOnSave": true
