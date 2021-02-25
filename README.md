@@ -11,7 +11,7 @@ $ bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_mac/maste
 
 ## After initialize
 - Desktop & Screen Saver
-    - Desktop - Colors - Space Gray Pro
+    - Desktop - Colors - Stone
 - Dock & Menu Bar
     - Do Not Disturb - Show in Menu Bar (Uncheck)
     - Display - Show in Menu Bar (Uncheck)

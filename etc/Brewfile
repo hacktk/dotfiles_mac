@@ -9,15 +9,17 @@ brew "bash"
 brew "bash-completion@2"
 brew "docker", link: false
 brew "git"
-brew "hashicorp/tap/terraform", link: false
 brew "php"
+brew "tfenv"
 brew "watch"
+brew "hashicorp/tap/terraform", link: false
 brew "sanemat/font/ricty"
 cask "alfred"
 cask "caffeine"
 cask "docker"
 cask "firefox"
 cask "google-chrome"
+cask "google-drive"
 cask "google-japanese-ime"
 cask "macwinzipper"
 cask "mysqlworkbench"
