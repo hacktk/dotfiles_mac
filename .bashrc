@@ -5,11 +5,12 @@ if [ "${BASH_VERSINFO[0]}" -ge 4 ] && [ -f "$BASH_COMPLETION_PATH" ]; then
 fi
 complete -C /usr/local/bin/terraform terraform
 
+eval "$(nodenv init -)"
+
 PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \W\[\033[01;37m\]$(__git_ps1 "(%s)")\[\033[01;34m\] \$\[\033[00m\] '
 
 alias ll='ls -ahl'
 
-export PATH="/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:$PATH"
 export LESSCHARSET=utf-8
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
