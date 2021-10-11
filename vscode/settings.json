@@ -15,13 +15,6 @@
     ],
     "explorer.compactFolders": false,
     "extensions.ignoreRecommendations": true,
-    "files.exclude": {
-        "**/.git": false,
-        "**/.svn": false,
-        "**/.hg": false,
-        "**/CVS": false,
-        "**/.DS_Store": false
-    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
@@ -32,6 +25,7 @@
     "php.suggest.basic": false,
     "php.validate.enable": false,
     "search.useIgnoreFiles": false,
+    "security.workspace.trust.untrustedFiles": "open",
     "[terraform]": {
         "editor.formatOnSave": true
     },
@@ -44,15 +38,10 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontFamily": "Ricty",
     "terminal.integrated.fontSize": 16,
-    "timeline.excludeSources": [
-        "git-history"
-    ],
-    "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#FFF"
     },
     "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "vscode-icons",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.visible": false
+    "workbench.startupEditor": "newUntitledFile"
 }
