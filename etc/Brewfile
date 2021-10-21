@@ -7,6 +7,7 @@ tap "sanemat/font"
 brew "awscli"
 brew "bash"
 brew "bash-completion@2"
+brew "cask"
 brew "docker", link: false
 brew "git"
 brew "php"
