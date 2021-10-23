@@ -1,4 +1,3 @@
-tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
@@ -10,11 +9,11 @@ brew "bash-completion@2"
 brew "cask"
 brew "docker", link: false
 brew "git"
+brew "nodenv"
 brew "php"
+brew "sanemat/font/ricty"
 brew "tfenv"
 brew "watch"
-brew "hashicorp/tap/terraform", link: false
-brew "sanemat/font/ricty"
 cask "alfred"
 cask "caffeine"
 cask "docker"

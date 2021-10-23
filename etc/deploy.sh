@@ -52,3 +52,6 @@ ln -fvs "$DOCKER_PATH/docker-compose.bash-completion" "$BASH_COMPLETION_COMPAT_D
 
 # terraform
 mkdir -p "$HOME/.terraform.d/plugin-cache"
+tfenv install latest
+tfenv use latest
+terraform -install-autocomplete

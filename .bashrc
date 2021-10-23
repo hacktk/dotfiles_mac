@@ -3,7 +3,6 @@ BASH_COMPLETION_PATH=/usr/local/share/bash-completion/bash_completion
 if [ "${BASH_VERSINFO[0]}" -ge 4 ] && [ -f "$BASH_COMPLETION_PATH" ]; then
     . "$BASH_COMPLETION_PATH"
 fi
-complete -C /usr/local/bin/terraform terraform
 
 eval "$(nodenv init -)"
 
