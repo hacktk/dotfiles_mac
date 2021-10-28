@@ -49,5 +49,9 @@
         "key": "cmd+l",
         "command": "editor.action.transformToLowercase",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "vscode-github.browseCurrentFile"
     }
 ]
