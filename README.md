@@ -22,6 +22,7 @@ $ bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_mac/maste
     - Modifier Keys
         - Caps Lock - Change to Control
         - Control - Change to Command
+        - Command - Change to Control
     - Input Sources
         - Add
             - Alphanumeric (Google)

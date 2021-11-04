@@ -13,11 +13,26 @@
     "editor.rulers": [
         120
     ],
+    "editor.suggestSelection": "first",
     "explorer.compactFolders": false,
     "extensions.ignoreRecommendations": true,
+    "files.exclude": {
+        "**/.classpath": false,
+        "**/.project": false,
+        "**/.settings": false,
+        "**/.factorypath": false
+    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "java.configuration.runtimes": [
+        {
+          "default": true,
+          "name": "JavaSE-1.8",
+          "path": "~/.sdkman/candidates/java/8.0.312-zulu/"
+        }
+    ],
+    "java.home": "~/.sdkman/candidates/java/current/",
     "[markdown]": {
         "files.trimTrailingWhitespace": false
     },
@@ -35,6 +50,7 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontFamily": "Ricty",
     "terminal.integrated.fontSize": 16,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#FFF"
     },
