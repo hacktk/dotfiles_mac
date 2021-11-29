@@ -1,5 +1,8 @@
 {
     "breadcrumbs.enabled": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
     "editor.cursorBlinking": "blink",
     "editor.cursorStyle": "line-thin",
     "editor.folding": false,
@@ -14,6 +17,12 @@
         120
     ],
     "editor.suggestSelection": "first",
+    "eslint.enable": true,
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "vue"
+    ],
     "explorer.compactFolders": false,
     "extensions.ignoreRecommendations": true,
     "files.exclude": {
@@ -33,6 +42,10 @@
         }
     ],
     "java.home": "~/.sdkman/candidates/java/current/",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
     "[markdown]": {
         "files.trimTrailingWhitespace": false
     },
@@ -50,7 +63,15 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontFamily": "Ricty",
     "terminal.integrated.fontSize": 16,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#FFF"
     },
