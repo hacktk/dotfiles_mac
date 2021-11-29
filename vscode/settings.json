@@ -38,12 +38,12 @@
     "gitlens.currentLine.enabled": false,
     "java.configuration.runtimes": [
         {
-          "default": true,
-          "name": "JavaSE-1.8",
-          "path": "~/.sdkman/candidates/java/8.0.312-zulu/"
+            "default": true,
+            "name": "JavaSE-1.8",
+            "path": "~/.sdkman/candidates/java/8.0.312-zulu/"
         }
     ],
-    "java.home": "~/.sdkman/candidates/java/current/",
+    "java.home": "~/.sdkman/candidates/java/11.0.13-zulu/",
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
