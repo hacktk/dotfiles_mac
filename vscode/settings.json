@@ -1,5 +1,6 @@
 {
     "breadcrumbs.enabled": false,
+    "editor.bracketPairColorization.enabled": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
@@ -8,6 +9,7 @@
     "editor.folding": false,
     "editor.fontFamily": "Ricty",
     "editor.fontSize": 16,
+    "editor.guides.bracketPairs": true,
     "editor.links": false,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
