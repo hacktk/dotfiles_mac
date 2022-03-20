@@ -57,10 +57,5 @@ tfenv use latest
 terraform -install-autocomplete
 
 # node
-nodenv install $(nodenv install -l | grep -E '^12' | grep -v dev | tail -1)
+nodenv install $(nodenv install -l | grep -E '^16' | grep -v dev | tail -1)
 nodenv global $(nodenv versions | tail -1 | tr '*' ' ' | awk '{print $1}')
-
-# sdkman
-curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk install maven

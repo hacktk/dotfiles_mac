@@ -21,6 +21,11 @@ defaults write -g AppleScrollerPagingBehavior -int 1
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # クラッシュリポーターをダイアログではなく通知センターで表示
 defaults write com.apple.CrashReporter UseUNC -bool true
+# Spotlight の検索対象を指定する
+defaults delete com.apple.spotlight orderedItems
+defaults write com.apple.spotlight orderedItems -array \
+    '{"enabled" = 1; "name" = "APPLICATIONS";}' \
+    '{"enabled" = 1; "name" = "SYSTEM_PREFS";}'
 
 echo "Configuring Dock..."
 # 自動的に隠す
@@ -59,13 +64,19 @@ defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
 # Mission Controlのショートカットを無効
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 32 "<dict><key>enabled</key><false/></dict>"
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 34 "<dict><key>enabled</key><false/></dict>"
-# Spotlightのショートカットを無効
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><false/></dict>"
 # アプリケーションウインドウのショートカットを無効
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 33 "<dict><key>enabled</key><false/></dict>"
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 35 "<dict><key>enabled</key><false/></dict>"
-# 次の入力ソースを選択をcommand+spaceに変更
+# Spotlightのショートカットをctrl+3に変更
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>51</integer><integer>20</integer><integer>262144</integer></array><key>type</key><string>standard</string></dict></dict>"
+# 次の入力ソースを選択をcmd+spaceに変更
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 "<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>32</integer><integer>49</integer><integer>1048576</integer></array><key>type</key><string>standard</string></dict></dict>"
+# 文字入力時の変換候補のフォントを変更
+defaults write com.apple.inputmethod.Kotoeri JIMPrefCandidateWindowFontKey -string "Ricty-Regular"
+# 文字入力時の自動変換を無効
+defaults write com.apple.inputmethod.Kotoeri JIMPrefLiveConversionKey -bool false
+# 文字入力時の予測変換を無効
+defaults write com.apple.inputmethod.Kotoeri JIMPrefPredictiveCandidateKey -bool false
 
 echo "Configuring Trackpad..."
 # 調べる&データ検出を無効
@@ -107,6 +118,11 @@ killall SystemUIServer
 echo "Configuring HostName..."
 # sudo scutil --set ComputerName mbp61
 # sudo scutil --set LocalHostName mbp61
+
+echo "Configuring Sleep..."
+sudo pmset -b displaysleep 0
+sudo pmset -c displaysleep 0
+defaults -currentHost write com.apple.screensaver idleTime -int 0
 
 echo
 

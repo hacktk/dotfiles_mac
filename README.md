@@ -11,7 +11,7 @@ $ bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_mac/maste
 
 ## After initialize
 - Desktop & Screen Saver
-    - Desktop - Colors - Stone
+    - Desktop - Colors - (Stone)
 - Dock & Menu Bar
     - Do Not Disturb - Show in Menu Bar (Uncheck)
     - Display - Show in Menu Bar (Uncheck)
@@ -19,14 +19,12 @@ $ bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_mac/maste
     - Battery - Show Percentage (Check)
     - Spotlight - Show in Menu Bar (Uncheck)
 - Keyboard
-    - Modifier Keys
-        - Caps Lock - Change to Control
-        - Control - Change to Command
-        - Command - Change to Control
+    - Keyboard
+        - Modifier Keys
+            - Caps Lock (Change to Control)
+            - Control (Change to Command)
+            - Command (Change to Control)
     - Input Sources
-        - Add
-            - Alphanumeric (Google)
-            - Hiragana (Google)
-        - Delete
-            - ABC (After check to `Romaji` in Japan - Romaji Input modes)
-            - Japanese - Romaji
+        - Japanese - Romaji
+            - Input modes
+                - Romaji (Uncheck)
