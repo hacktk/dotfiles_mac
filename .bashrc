@@ -1,11 +1,8 @@
-export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
-BASH_COMPLETION_PATH=/usr/local/share/bash-completion/bash_completion
-if [ "${BASH_VERSINFO[0]}" -ge 4 ] && [ -f "$BASH_COMPLETION_PATH" ]; then
-    . "$BASH_COMPLETION_PATH"
-fi
-
+eval $(/opt/homebrew/bin/brew shellenv)
 eval "$(nodenv init -)"
 eval "$(npm completion)"
+
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \W\[\033[01;37m\]$(__git_ps1 "(%s)")\[\033[01;34m\] \$\[\033[00m\] '
 

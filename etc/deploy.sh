@@ -16,7 +16,7 @@ for file in .??*; do
 done
 
 # ricty
-cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
+cp -f /opt/homebrew/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
 fc-cache -fv
 
 # terminal
@@ -28,7 +28,7 @@ if [ "${CURRENT_PROFILE}" != "${TERMINAL_PROFILE}" ]; then
     defaults write com.apple.Terminal "Startup Window Settings" -string "$TERMINAL_PROFILE"
 fi
 defaults import com.apple.Terminal "$HOME/Library/Preferences/com.apple.Terminal.plist"
-sudo dscl . -create /Users/$USER UserShell /usr/local/bin/bash
+sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/bash
 
 # visual-studio-code
 cat "$DOT_PATH/vscode/extensions" | while read line
@@ -41,14 +41,7 @@ ln -fvs "$DOT_PATH/vscode/settings.json" "$VSC_PATH/settings.json"
 ln -fvs "$DOT_PATH/vscode/keybindings.json" "$VSC_PATH/keybindings.json"
 
 # git
-ln -fvs "/usr/local/share/git-core/contrib/diff-highlight/diff-highlight" "/usr/local/bin"
-
-# docker
-DOCKER_PATH="/Applications/Docker.app/Contents/Resources/etc"
-BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
-ln -fvs "$DOCKER_PATH/docker.bash-completion" "$BASH_COMPLETION_COMPAT_DIR/docker"
-ln -fvs "$DOCKER_PATH/docker-machine.bash-completion" "$BASH_COMPLETION_COMPAT_DIR/docker-machine"
-ln -fvs "$DOCKER_PATH/docker-compose.bash-completion" "$BASH_COMPLETION_COMPAT_DIR/docker-compose"
+sudo ln -fvs "/opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight" "/usr/local/bin"
 
 # terraform
 mkdir -p "$HOME/.terraform.d/plugin-cache"
