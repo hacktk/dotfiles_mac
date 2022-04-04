@@ -107,11 +107,6 @@ defaults write com.apple.dock showLaunchpadGestureEnabled -bool false
 echo "Configuring Menu Bar..."
 # サウンドを表示する
 defaults write com.apple.controlcenter "NSStatusItem Visible Sound" -bool true
-# VPNを表示する
-defaults write com.apple.systemuiserver menuExtras -array \
-    "/System/Library/CoreServices/Menu Extras/VPN.menu"
-# VPNの接続時間を表示
-defaults write com.apple.networkConnect VPNShowTime -bool true
 # AirPlayを表示しない
 defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.airplay" -bool false
 defaults write com.apple.airplay showInMenuBarIfPresent -bool false
