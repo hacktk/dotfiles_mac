@@ -75,12 +75,6 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 35 "<dic
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>51</integer><integer>20</integer><integer>262144</integer></array><key>type</key><string>standard</string></dict></dict>"
 # 次の入力ソースを選択をcmd+spaceに変更
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 "<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>32</integer><integer>49</integer><integer>1048576</integer></array><key>type</key><string>standard</string></dict></dict>"
-# 文字入力時の変換候補のフォントを変更
-defaults write com.apple.inputmethod.Kotoeri JIMPrefCandidateWindowFontKey -string "Ricty-Regular"
-# 文字入力時の自動変換を無効
-defaults write com.apple.inputmethod.Kotoeri JIMPrefLiveConversionKey -bool false
-# 文字入力時の予測変換を無効
-defaults write com.apple.inputmethod.Kotoeri JIMPrefPredictiveCandidateKey -bool false
 
 echo "Configuring Trackpad..."
 # 調べる&データ検出を無効

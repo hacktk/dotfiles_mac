@@ -24,3 +24,10 @@ $ /bin/bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_mac/
             - Caps Lock (Change to Control)
             - Control (Change to Command)
             - Command (Change to Control)
+    - Input Sources
+        - Add
+            - Alphanumeric (Google)
+            - Hiragana (Google)
+        - Delete
+            - ABC (After check to `Romaji` in Japan - Romaji Input modes)
+            - Japanese - Romaji
