@@ -4,6 +4,7 @@
     "editor.bracketPairColorization.enabled": true,
     "editor.cursorBlinking": "blink",
     "editor.cursorStyle": "line-thin",
+    "editor.experimental.stickyScroll.enabled": true,
     "editor.folding": false,
     "editor.fontFamily": "Ricty",
     "editor.fontSize": 16,
