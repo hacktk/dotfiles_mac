@@ -2,6 +2,8 @@ bmewburn.vscode-intelephense-client
 eamodio.gitlens
 ecmel.vscode-html-css
 EditorConfig.EditorConfig
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
 formulahendry.code-runner
 hashicorp.terraform
 mechatroner.rainbow-csv
@@ -11,8 +13,9 @@ ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-audio
 ms-vsliveshare.vsliveshare-pack
 neilbrayfield.php-docblocker
-Oracle.mysql-shell-for-vs-code
+pnp.polacode
 redhat.vscode-yaml
 streetsidesoftware.code-spell-checker
+stringham.copy-with-imports
 vscode-icons-team.vscode-icons
 wmaurer.change-case
