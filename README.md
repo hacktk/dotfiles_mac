@@ -2,6 +2,9 @@
 
 ## Initialize
 ```
+# change login shell & restart terminal
+$ chsh -s /bin/bash
+
 # generate ssh key & manually add it to github
 $ ssh-keygen -t rsa -b 4096 -C "hacktk3@gmail.com"
 
