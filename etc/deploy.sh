@@ -15,6 +15,9 @@ for file in .??*; do
     ln -fvs "$DOT_PATH/$file" "$HOME/$file"
 done
 
+# brew
+brew bundle --file=etc/Brewfile
+
 # ricty
 cp -f /opt/homebrew/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
 fc-cache -fv
