@@ -116,8 +116,3 @@ echo "Configuring Sleep..."
 sudo pmset -b displaysleep 0
 sudo pmset -c displaysleep 0
 defaults -currentHost write com.apple.screensaver idleTime -int 0
-
-echo
-
-# brew
-brew bundle --file=etc/Brewfile
