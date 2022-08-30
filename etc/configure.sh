@@ -23,7 +23,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.CrashReporter UseUNC -bool true
 # Spotlight の検索対象を指定する
 # com.apple.spotlightが存在しない場合のために、一度書き込みんでキーを作る
-defaults write com.apple.spotlight orderedItems -array
+defaults write com.apple.spotlight orderedItems -array \
     '{"enabled" = 1; "name" = "APPLICATIONS";}' \
     '{"enabled" = 1; "name" = "SYSTEM_PREFS";}'
 defaults delete com.apple.spotlight orderedItems
