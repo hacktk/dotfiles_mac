@@ -4,7 +4,6 @@
     "editor.bracketPairColorization.enabled": true,
     "editor.cursorBlinking": "blink",
     "editor.cursorStyle": "line-thin",
-    "editor.experimental.stickyScroll.enabled": true,
     "editor.folding": false,
     "editor.fontFamily": "Ricty",
     "editor.fontSize": 16,
@@ -39,12 +38,7 @@
     "[terraform]": {
         "editor.formatOnSave": true
     },
-    "terraform.languageServer": {
-        "external": true,
-        "args": [
-            "serve"
-        ]
-    },
+    "terraform.languageServer.enable": true,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontFamily": "Ricty",
     "terminal.integrated.fontSize": 16,
