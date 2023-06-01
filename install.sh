@@ -5,6 +5,7 @@ set -eu
 # install brew & command line tools
 if ! command -v brew > /dev/null 2>&1; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    sudo softwareupdate --install-rosetta
     echo
 fi
 
