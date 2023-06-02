@@ -5,7 +5,7 @@
     "editor.cursorBlinking": "blink",
     "editor.cursorStyle": "line-thin",
     "editor.folding": false,
-    "editor.fontFamily": "Ricty",
+    "editor.fontFamily": "UDEV Gothic JPDOC",
     "editor.fontSize": 16,
     "editor.guides.bracketPairs": true,
     "editor.links": false,
@@ -40,7 +40,7 @@
     },
     "terraform.languageServer.enable": true,
     "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.fontFamily": "Ricty",
+    "terminal.integrated.fontFamily": "UDEV Gothic JPDOC",
     "terminal.integrated.fontSize": 16,
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#FFF"

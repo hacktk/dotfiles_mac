@@ -18,8 +18,14 @@ done
 # brew
 brew bundle --file=etc/Brewfile
 
-# ricty
-cp -f /opt/homebrew/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
+# UDEV Gothic
+UDEV_GOTHIC_VERSION="v1.3.0"
+UDEV_GOTHIC_PATH="/dev/shm/udev-gothic"
+CUR_PATH=$(pwd)
+mkdir -p $UDEV_GOTHIC_PATH && cd $UDEV_GOTHIC_PATH
+curl -L https://github.com/yuru7/udev-gothic/releases/download/$UDEV_GOTHIC_VERSION/UDEVGothic_$UDEV_GOTHIC_VERSION.zip -o ./UDEVGothic.zip
+unzip ./UDEVGothic.zip -d ~/Library/Fonts/
+cd $CUR_PATH && rm -rf $UDEV_GOTHIC_PATH
 fc-cache -fv
 
 # terminal
@@ -45,12 +51,6 @@ ln -fvs "$DOT_PATH/vscode/keybindings.json" "$VSC_PATH/keybindings.json"
 
 # git
 sudo ln -fvs "/opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight" "/usr/local/bin/"
-
-# terraform
-mkdir -p "$HOME/.terraform.d/plugin-cache"
-tfenv install latest
-tfenv use latest
-terraform -install-autocomplete
 
 # node
 nodenv install $(nodenv install -l | grep -E '^20' | grep -v dev | tail -1)
