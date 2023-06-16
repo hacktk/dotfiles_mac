@@ -1,6 +1,6 @@
 eval $(/opt/homebrew/bin/brew shellenv)
-eval "$(nodenv init -)"
-eval "$(npm completion)"
+
+source ~/.config/op/plugins.sh
 
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 

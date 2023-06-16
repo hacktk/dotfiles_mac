@@ -30,15 +30,9 @@
         "editor.wordWrap": "off",
         "files.trimTrailingWhitespace": false
     },
-    "php.suggest.basic": false,
-    "php.validate.enable": false,
     "redhat.telemetry.enabled": false,
     "search.useIgnoreFiles": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "[terraform]": {
-        "editor.formatOnSave": true
-    },
-    "terraform.languageServer.enable": true,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontFamily": "UDEV Gothic JPDOC",
     "terminal.integrated.fontSize": 16,

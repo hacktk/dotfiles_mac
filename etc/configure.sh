@@ -109,8 +109,8 @@ defaults write com.apple.menuextra.clock DateFormat -string "M\\U6708d\\U65e5(EE
 killall SystemUIServer
 
 echo "Configuring HostName..."
-# sudo scutil --set ComputerName mbp61
-# sudo scutil --set LocalHostName mbp61
+sudo scutil --set ComputerName mba61
+sudo scutil --set LocalHostName mba61
 
 echo "Configuring Sleep..."
 sudo pmset -b displaysleep 0

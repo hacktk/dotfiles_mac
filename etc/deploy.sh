@@ -40,23 +40,9 @@ defaults import com.apple.Terminal "$HOME/Library/Preferences/com.apple.Terminal
 sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/bash
 
 # visual-studio-code
-cat "$DOT_PATH/vscode/extensions" | while read line
-do
-    code --install-extension $line
-done
-code --list-extensions > "$DOT_PATH/vscode/extensions"
 VSC_PATH="$HOME/Library/Application Support/Code/User"
 ln -fvs "$DOT_PATH/vscode/settings.json" "$VSC_PATH/settings.json"
 ln -fvs "$DOT_PATH/vscode/keybindings.json" "$VSC_PATH/keybindings.json"
 
 # git
 sudo ln -fvs "/opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight" "/usr/local/bin/"
-
-# node
-nodenv install $(nodenv install -l | grep -E '^20' | grep -v dev | tail -1)
-nodenv global $(nodenv versions | tail -1 | tr '*' ' ' | awk '{print $1}')
-
-# sdkman
-curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk install java $(sdk list java | grep -o '17[0-9\.]*-amzn')
