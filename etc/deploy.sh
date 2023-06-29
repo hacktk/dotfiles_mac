@@ -8,6 +8,10 @@ if [ ! -d "$DOT_PATH" ]; then
 fi
 cd "$DOT_PATH" || exit 1
 
+mkdir "$HOME/.config"
+ln -fvs "$DOT_PATH/git" "$HOME/.config/git"
+mkdir "$HOME/repo/org"
+
 # home dir
 for file in .??*; do
     [[ "$file" = ".git" ]] && continue

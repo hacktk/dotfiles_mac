@@ -4,7 +4,6 @@
 [color]
     ui = auto
 [core]
-    excludesfile = ~/.gitignore
     ignorecase = false
     quotepath = false
 [interactive]
@@ -15,3 +14,6 @@
     show = diff-highlight | less
 [diff]
     compactionHeuristic = true
+
+[includeIf "gitdir:~/repo/org/"]
+    path = ~/.config/git/config-org
