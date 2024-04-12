@@ -44,3 +44,6 @@ ln -fvs "$DOT_PATH/vscode/keybindings.json" "$VSC_PATH/keybindings.json"
 
 # git
 sudo ln -fvs "/opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight" "/usr/local/bin/"
+
+# forward
+sudo ln -fvs "$DOT_PATH/tool/forward" "/usr/local/bin/"
