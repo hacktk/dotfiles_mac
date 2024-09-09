@@ -11,3 +11,5 @@ alias ll='ls -ahlF'
 
 export LESSCHARSET=utf-8
 export BASH_SILENCE_DEPRECATION_WARNING=1
+export COMPOSE_MENU=0
+
