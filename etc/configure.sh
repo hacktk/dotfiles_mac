@@ -54,6 +54,9 @@ defaults write com.apple.dock wvous-tl-modifier -int 0
 # ホットコーナー(左下にスリープ)
 defaults write com.apple.dock wvous-bl-corner -int 10
 defaults write com.apple.dock wvous-bl-modifier -int 0
+# ホットコーナー(右下をクリア)
+defaults write com.apple.dock wvous-br-corner -int 1
+defaults write com.apple.dock wvous-br-modifier -int 0
 killall Dock
 
 echo "Configuring Keyboard..."
