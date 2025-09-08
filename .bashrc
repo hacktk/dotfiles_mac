@@ -1,6 +1,7 @@
-eval $(/opt/homebrew/bin/brew shellenv)
+export LC_COLLATE="C"
+export LC_CTYPE="en_US.UTF-8"
 
-source ~/.config/op/plugins.sh
+eval $(/opt/homebrew/bin/brew shellenv)
 source ~/.sdkman/bin/sdkman-init.sh
 
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
